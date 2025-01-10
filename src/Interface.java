@@ -12,7 +12,7 @@ public class Interface {
         Letters letters = new Letters(someWord.getWord());
         letters.wordToLetters();
 
-        PrintUnNowWord unNowWordDefault = new PrintUnNowWord(letters.getLetters(), userLetter.getUserLetter());
+        PrintUnNowWord unNowWordDefault = new PrintUnNowWord(Letters.getLetters(), userLetter.getUserLetter());
         unNowWordDefault.setUnNowWord();
 
         GallowsPrinter printGallows = new GallowsPrinter();
@@ -21,10 +21,10 @@ public class Interface {
         printGallows.printGallows();
         unNowWordDefault.printUnNowWord();
 
-        PrintUnNowWord unNowWord = new PrintUnNowWord(letters.getLetters(), userLetter.getUserLetter());
+        PrintUnNowWord unNowWord = new PrintUnNowWord(Letters.getLetters(), userLetter.getUserLetter());
         unNowWord.setUnNowWord();
 
-        while (Counter.getCounterDefeat()>0 && Counter.getCounterWin()<Letters.setLetters.size()){
+        while (Counter.getCounterDefeat()>0 && Counter.getCounterWin()<Letters.getLetters().length){
 
             unNowWord.updateUnNowWord();
 

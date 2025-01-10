@@ -1,6 +1,6 @@
 public class PrintUnNowWord {
     private char[] letters;
-    private char[] unNowWord = new char[Letters.length];
+    private char[] unNowWord = new char[Letters.getLetters().length];
     private char userLetter;
 
     PrintUnNowWord(char[] letters, char userLatter) {

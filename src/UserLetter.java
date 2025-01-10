@@ -8,7 +8,7 @@ public class UserLetter {
         boolean notGood = true;
         Scanner scanner = new Scanner(System.in);
         while (notGood) {
-            System.out.println("Enter a letter: ");
+            System.out.println("\nEnter a letter: ");
             String userSymbol = scanner.nextLine();
             if(userSymbol.length() == 1 && Character.isLetter(userSymbol.charAt(0))) {
                 userLetter = userSymbol.charAt(0);
