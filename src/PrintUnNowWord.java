@@ -1,5 +1,4 @@
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 
 public class PrintUnNowWord {
     private char[] letters;
@@ -29,7 +28,7 @@ public class PrintUnNowWord {
             }
         }
         if (index == 0) {
-            Counter.setCounterDefit();
+            Counter.setCounterDefeat();
         }
         else Counter.setCounterWin();
     }

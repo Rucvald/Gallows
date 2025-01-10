@@ -6,7 +6,7 @@ public class Counter {
         return counterDefeat;
     }
 
-    public static void setCounterDefit() {
+    public static void setCounterDefeat() {
         counterDefeat--;
     }
 
@@ -16,5 +16,10 @@ public class Counter {
 
     public static void setCounterWin() {
         counterWin++;
+    }
+
+    public static void resetCounter() {
+        counterDefeat = 8;
+        counterWin = 0;
     }
 }

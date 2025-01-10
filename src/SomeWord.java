@@ -8,15 +8,27 @@ public class SomeWord {
 
     private String word;
 
-    private int random(){
+    private int numberOfWords() throws FileNotFoundException {
+        int numberOfWords = 0;
+        File file = new File("words.txt");
+        Scanner scanner = new Scanner(file.getAbsoluteFile());
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            numberOfWords++;
+        }
+        scanner.close();
+        return numberOfWords;
+    }
+
+    private int random() throws FileNotFoundException {
         Random rand = new Random();
-        int randomNum = rand.nextInt(3)+1;
+        int randomNum = rand.nextInt(numberOfWords())+1;
         return randomNum;
     }
 
     public void setWord() throws FileNotFoundException {
-        File file = new File("D:/Programs/Lessons/Gallows/words.txt");
-        Scanner scanner = new Scanner(file);
+        File file = new File("words.txt");
+        Scanner scanner = new Scanner(file.getAbsoluteFile());
         int randomNum = random();
         int i = 0;
         while(scanner.hasNextLine()&&i<randomNum){
@@ -26,7 +38,7 @@ public class SomeWord {
         scanner.close();
     }
 
-    public String getWord() throws FileNotFoundException {
+    public String getWord() {
         return word;
     }
 }

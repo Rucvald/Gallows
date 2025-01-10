@@ -2,7 +2,7 @@ import java.io.FileNotFoundException;
 
 public class Interface {
 
-    public void interfaceMethod() throws FileNotFoundException {
+    public void gameInterface() throws FileNotFoundException {
 
         SomeWord someWord = new SomeWord();
         someWord.setWord();
@@ -24,7 +24,7 @@ public class Interface {
         PrintUnNowWord unNowWord = new PrintUnNowWord(letters.getLetters(), userLetter.getUserLetter());
         unNowWord.setUnNowWord();
 
-        while (Counter.getCounterDefeat()<=8 && Counter.getCounterWin()<Letters.setLetters.size()){
+        while (Counter.getCounterDefeat()>0 && Counter.getCounterWin()<Letters.setLetters.size()){
 
             unNowWord.updateUnNowWord();
 
@@ -51,6 +51,13 @@ public class Interface {
             printGallows.printGallows();
             unNowWord.printUnNowWord();
         }
-        System.out.println("You are WINNER!!!!!");
+        if (Counter.getCounterDefeat()<=0){
+            System.out.println("\nYou loose!");
+            Counter.resetCounter();
+        }
+        else {
+            System.out.println("\nYou are WINNER!!!!!");
+            Counter.resetCounter();
+        }
     }
 }

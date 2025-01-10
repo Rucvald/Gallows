@@ -32,7 +32,7 @@ public class Main {
             switch(choice) {
                 case PLAY:
                     Interface gameInterface = new Interface();
-                    gameInterface.interfaceMethod();
+                    gameInterface.gameInterface();
                     break;
                 case EXIT:
                     System.out.println("Goodbye!");
