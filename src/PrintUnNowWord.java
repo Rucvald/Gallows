@@ -1,5 +1,3 @@
-import java.io.FileNotFoundException;
-
 public class PrintUnNowWord {
     private char[] letters;
     private char[] unNowWord = new char[Letters.length];
@@ -14,9 +12,10 @@ public class PrintUnNowWord {
         for (int i = 0; i < unNowWord.length; i++) {
             unNowWord[i] = '*';
         }
+        System.out.println();
     }
 
-    public void updateUnNowWord() throws FileNotFoundException {
+    public void updateUnNowWord() {
         UserLetter userLetter1 = new UserLetter();
         userLetter1.setLetter();
         userLetter = userLetter1.getUserLetter();

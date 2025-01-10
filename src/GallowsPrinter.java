@@ -1,6 +1,8 @@
-public class PrintGallows {
+public class GallowsPrinter {
+    private final int line = 12;
+    private final int column = 7;
 
-    private char[][] gallows = new char[12][7];
+    private char[][] gallows = new char[line][column];
 
     public void setGallows() {
         for (int i = 0; i < gallows.length; i++) {

@@ -15,7 +15,7 @@ public class Interface {
         PrintUnNowWord unNowWordDefault = new PrintUnNowWord(letters.getLetters(), userLetter.getUserLetter());
         unNowWordDefault.setUnNowWord();
 
-        PrintGallows printGallows = new PrintGallows();
+        GallowsPrinter printGallows = new GallowsPrinter();
         printGallows.setGallows();
 
         printGallows.printGallows();
