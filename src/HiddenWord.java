@@ -1,10 +1,9 @@
-import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Random;
 import java.util.Scanner;
 
-public class SomeWord {
+public class HiddenWord {
 
     private String word;
 

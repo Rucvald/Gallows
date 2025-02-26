@@ -4,12 +4,12 @@ public class Interface {
 
     public void gameInterface() throws FileNotFoundException {
 
-        SomeWord someWord = new SomeWord();
-        someWord.setWord();
+        HiddenWord hiddenWord = new HiddenWord();
+        hiddenWord.setWord();
 
         UserLetter userLetter = new UserLetter();
 
-        Letters letters = new Letters(someWord.getWord());
+        Letters letters = new Letters(hiddenWord.getWord());
         letters.wordToLetters();
 
         PrintUnNowWord unNowWordDefault = new PrintUnNowWord(Letters.getLetters(), userLetter.getUserLetter());
