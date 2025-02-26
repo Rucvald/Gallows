@@ -7,16 +7,14 @@ public class HiddenWord {
 
     private String word;
 
-    private int numberOfWords() throws FileNotFoundException {
-        int numberOfWords = 0;
-        File file = new File("words.txt");
-        Scanner scanner = new Scanner(file.getAbsoluteFile());
-        while (scanner.hasNextLine()) {
-            String line = scanner.nextLine();
-            numberOfWords++;
+    public void setWord() throws FileNotFoundException {
+        Scanner scanner = getScanner();
+        int randomNum = random();
+        int i = 0;
+        while(scanner.hasNextLine()&&i<randomNum){
+            word = scanner.nextLine();
+            i++;
         }
-        scanner.close();
-        return numberOfWords;
     }
 
     private int random() throws FileNotFoundException {
@@ -25,19 +23,29 @@ public class HiddenWord {
         return randomNum;
     }
 
-    public void setWord() throws FileNotFoundException {
-        File file = new File("words.txt");
-        Scanner scanner = new Scanner(file.getAbsoluteFile());
-        int randomNum = random();
-        int i = 0;
-        while(scanner.hasNextLine()&&i<randomNum){
-            word = scanner.nextLine();
-            i++;
+    private int numberOfWords() throws FileNotFoundException {
+        int numberOfWords = 0;
+        Scanner scanner = getScanner();
+        while (scanner.hasNextLine()) {
+            numberOfWords++;
         }
-        scanner.close();
+        return numberOfWords;
     }
 
     public String getWord() {
         return word;
     }
+
+    private Scanner getScanner() throws FileNotFoundException {
+        File file = new File("words.txt");
+        Scanner scanner = new Scanner(file.getAbsoluteFile());
+        scanner.close();
+        return scanner;
+    }
 }
+
+
+
+
+
+//String line = scanner.nextLine();
