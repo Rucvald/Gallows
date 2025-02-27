@@ -11,12 +11,12 @@ public class Letters {
         this.word = word;
     }
 
-    public void wordToLetters(){
-        letters = word.toCharArray();
-    }
-
-    public static char[] getLetters(){
-        return letters;
-    }
+//    public void wordToLetters(){
+//        letters = word.toCharArray();
+//    }
+//
+//    public static char[] getLetters(){
+//        return letters;
+//    }
 
 }

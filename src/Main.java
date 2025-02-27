@@ -3,21 +3,21 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         menu();
     }
 
-    public static void menu() throws FileNotFoundException {
+    public static void menu() throws FileNotFoundException, InterruptedException {
         boolean play = true;
         System.out.println("Welcome to Gallows!");
-        while(play) {
+        while (play) {
             System.out.println("If you want to play, enter 'play' or 'exit' to exit:");
             Scanner scanner = new Scanner(System.in);
             String console = scanner.nextLine();
 
             ChoiceToGame choice = ChoiceToGame.PLAY;
 
-            switch(console) {
+            switch (console) {
                 case "play":
                     break;
                 case "exit":

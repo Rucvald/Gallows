@@ -2,17 +2,19 @@ import java.io.FileNotFoundException;
 
 public class Interface {
 
-    public void gameInterface() throws FileNotFoundException {
+    public void gameInterface() throws FileNotFoundException, InterruptedException {
 
         HiddenWord hiddenWord = new HiddenWord();
+        System.out.println("-------------");
         hiddenWord.setWord();
-
+        System.out.println("-------------");
         UserLetter userLetter = new UserLetter();
+        System.out.println("-------------");
+        hiddenWord.wordToLetters();
+//        Letters letters = new Letters(hiddenWord.getWord());
+//        letters.wordToLetters();
 
-        Letters letters = new Letters(hiddenWord.getWord());
-        letters.wordToLetters();
-
-        PrintUnNowWord unNowWordDefault = new PrintUnNowWord(Letters.getLetters(), userLetter.getUserLetter());
+        PrintUnNowWord unNowWordDefault = new PrintUnNowWord(HiddenWord.getLetters(), userLetter.getUserLetter());
         unNowWordDefault.setUnNowWord();
 
         GallowsPrinter printGallows = new GallowsPrinter();
@@ -21,10 +23,10 @@ public class Interface {
         printGallows.printGallows();
         unNowWordDefault.printUnNowWord();
 
-        PrintUnNowWord unNowWord = new PrintUnNowWord(Letters.getLetters(), userLetter.getUserLetter());
+        PrintUnNowWord unNowWord = new PrintUnNowWord(HiddenWord.getLetters(), userLetter.getUserLetter());
         unNowWord.setUnNowWord();
 
-        while (Counter.getCounterDefeat()>0 && Counter.getCounterWin()<Letters.getLetters().length){
+        while (Counter.getCounterDefeat()>0 && Counter.getCounterWin()<HiddenWord.getLetters().length){
 
             unNowWord.updateUnNowWord();
 
