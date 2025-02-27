@@ -1,4 +1,5 @@
 public enum ChoiceToGame {
+    MENU("menu"),
     PLAY("play"),
     EXIT("exit");
     private String choice;

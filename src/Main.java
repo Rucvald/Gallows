@@ -15,10 +15,11 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             String console = scanner.nextLine();
 
-            ChoiceToGame choice = ChoiceToGame.PLAY;
+            ChoiceToGame choice = ChoiceToGame.MENU;
 
             switch (console) {
                 case "play":
+                    choice = ChoiceToGame.PLAY;
                     break;
                 case "exit":
                     choice = ChoiceToGame.EXIT;
