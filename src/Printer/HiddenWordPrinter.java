@@ -14,21 +14,21 @@ public class HiddenWordPrinter {
         this.userLetter = userLatter;
     }
 
-    public void setUnNowWord() {
+    public void setHiddenWord() {
         for (int i = 0; i < unNowWord.length; i++) {
             unNowWord[i] = '*';
         }
         System.out.println();
     }
 
-    public void updateUnNowWord() {
-        UserLetter userLetter1 = new UserLetter();
-        userLetter1.setLetter();
-        userLetter = userLetter1.getUserLetter();
+    public void updateHiddenWord() {
+        UserLetter userLetter = new UserLetter();
+        userLetter.setLetter();
+        this.userLetter = userLetter.getUserLetter();
         int index = 0;
         for (int i = 0; i < letters.length; i++) {
-            if (letters[i] == userLetter) {
-                unNowWord[i] = userLetter;
+            if (letters[i] == this.userLetter) {
+                unNowWord[i] = this.userLetter;
                 index++;
             }
         }
@@ -37,7 +37,7 @@ public class HiddenWordPrinter {
         } else Counter.setCounterWin();
     }
 
-    public void printUnNowWord() {
+    public void printHiddenWord() {
         for (int i = 0; i < unNowWord.length; i++) {
             System.out.print(unNowWord[i]);
         }

@@ -1,15 +1,13 @@
 package Logics;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) {
         menu();
     }
 
-    public static void menu() throws FileNotFoundException, InterruptedException {
+    public static void menu() {
         boolean play = true;
         System.out.println("Welcome to Gallows!");
         while (play) {

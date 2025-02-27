@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 
 public class Interface {
 
-    public void gameInterface() throws FileNotFoundException, InterruptedException {
+    public void gameInterface() {
 
         HiddenWord hiddenWord = new HiddenWord();
         hiddenWord.setWord();
@@ -15,20 +15,20 @@ public class Interface {
         hiddenWord.wordToLetters();
 
         HiddenWordPrinter hiddenPrintWordDefault = new HiddenWordPrinter(HiddenWord.getLetters(), userLetter.getUserLetter());
-        hiddenPrintWordDefault.setUnNowWord();
+        hiddenPrintWordDefault.setHiddenWord();
 
         GallowsPrinter printGallows = new GallowsPrinter();
         printGallows.setGallows();
 
         printGallows.printGallows();
-        hiddenPrintWordDefault.printUnNowWord();
+        hiddenPrintWordDefault.printHiddenWord();
 
         HiddenWordPrinter HiddenWord2 = new HiddenWordPrinter(HiddenWord.getLetters(), userLetter.getUserLetter());
-        HiddenWord2.setUnNowWord();
+        HiddenWord2.setHiddenWord();
 
         while (Counter.getCounterDefeat() > 0 && Counter.getCounterWin() < HiddenWord.getLetters().length) {
 
-            HiddenWord2.updateUnNowWord();
+            HiddenWord2.updateHiddenWord();
 
             switch (Counter.getCounterDefeat()) {
                 case 8:
@@ -59,7 +59,7 @@ public class Interface {
                     break;
             }
             printGallows.printGallows();
-            HiddenWord2.printUnNowWord();
+            HiddenWord2.printHiddenWord();
         }
         if (Counter.getCounterDefeat() <= 0) {
             System.out.println("\nYou loose!");
