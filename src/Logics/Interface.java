@@ -26,7 +26,7 @@ public class Interface {
         HiddenWordPrinter HiddenWord2 = new HiddenWordPrinter(HiddenWord.getLetters(), userLetter.getUserLetter());
         HiddenWord2.setHiddenWord();
 
-        while (Counter.getCounterDefeat() > 0 && Counter.getCounterWin() < HiddenWord.getLetters().length) {
+        while (Counter.getCounterDefeat() > 0 && Counter.getCounterWin() < HiddenWord.getWordLength()) {
 
             HiddenWord2.updateHiddenWord();
 

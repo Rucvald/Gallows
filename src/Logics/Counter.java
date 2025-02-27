@@ -16,8 +16,8 @@ public class Counter {
         return counterWin;
     }
 
-    public static void setCounterWin() {
-        counterWin++;
+    public static void setCounterWin(int numberOfWords) {
+        counterWin = counterWin + numberOfWords;
     }
 
     public static void resetCounter() {

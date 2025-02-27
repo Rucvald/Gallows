@@ -5,8 +5,8 @@ import Logics.UserLetter;
 import Logics.Counter;
 
 public class HiddenWordPrinter {
-    private char[] letters;
-    private char[] unNowWord = new char[HiddenWord.getWordLength()];
+    private final char[] letters;
+    private final char[] hiddenWord = new char[HiddenWord.getWordLength()];
     private char userLetter;
 
     public HiddenWordPrinter(char[] letters, char userLatter) {
@@ -15,8 +15,8 @@ public class HiddenWordPrinter {
     }
 
     public void setHiddenWord() {
-        for (int i = 0; i < unNowWord.length; i++) {
-            unNowWord[i] = '*';
+        for (int i = 0; i < hiddenWord.length; i++) {
+            hiddenWord[i] = '*';
         }
         System.out.println();
     }
@@ -28,18 +28,18 @@ public class HiddenWordPrinter {
         int index = 0;
         for (int i = 0; i < letters.length; i++) {
             if (letters[i] == this.userLetter) {
-                unNowWord[i] = this.userLetter;
+                hiddenWord[i] = this.userLetter;
                 index++;
             }
         }
         if (index == 0) {
             Counter.setCounterDefeat();
-        } else Counter.setCounterWin();
+        } else Counter.setCounterWin(index);
     }
 
     public void printHiddenWord() {
-        for (int i = 0; i < unNowWord.length; i++) {
-            System.out.print(unNowWord[i]);
+        for (int i = 0; i < hiddenWord.length; i++) {
+            System.out.print(hiddenWord[i]);
         }
     }
 }
