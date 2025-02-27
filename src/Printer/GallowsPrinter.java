@@ -1,3 +1,5 @@
+package Printer;
+
 public class GallowsPrinter {
     private final int line = 12;
     private final int column = 7;

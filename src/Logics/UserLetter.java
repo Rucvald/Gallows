@@ -1,3 +1,5 @@
+package Logics;
+
 import java.util.Scanner;
 
 public class UserLetter {
@@ -10,7 +12,7 @@ public class UserLetter {
         while (notGood) {
             System.out.println("\nEnter a letter: ");
             String userSymbol = scanner.nextLine();
-            if(userSymbol.length() == 1 && Character.isLetter(userSymbol.charAt(0))) {
+            if (userSymbol.length() == 1 && Character.isLetter(userSymbol.charAt(0))) {
                 userLetter = userSymbol.charAt(0);
                 System.out.println("You entered: " + userLetter);
                 notGood = false;

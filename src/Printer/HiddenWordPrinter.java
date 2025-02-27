@@ -1,9 +1,14 @@
-public class PrintUnNowWord {
+package Printer;
+import Logics.HiddenWord;
+import Logics.UserLetter;
+import Logics.Counter;
+
+public class HiddenWordPrinter {
     private char[] letters;
     private char[] unNowWord = new char[HiddenWord.getWordLength()];
     private char userLetter;
 
-    PrintUnNowWord(char[] letters, char userLatter) {
+    public HiddenWordPrinter(char[] letters, char userLatter) {
         this.letters = letters;
         this.userLetter = userLatter;
     }

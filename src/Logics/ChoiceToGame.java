@@ -1,3 +1,5 @@
+package Logics;
+
 public enum ChoiceToGame {
     MENU("menu"),
     PLAY("play"),

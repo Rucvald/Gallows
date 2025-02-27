@@ -1,3 +1,5 @@
+package Logics;
+
 public class Counter {
     private static int counterDefeat = 8;
     private static int counterWin = 0;

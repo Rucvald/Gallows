@@ -1,3 +1,8 @@
+package Logics;
+
+import Printer.GallowsPrinter;
+import Printer.HiddenWordPrinter;
+
 import java.io.FileNotFoundException;
 
 public class Interface {
@@ -5,30 +10,27 @@ public class Interface {
     public void gameInterface() throws FileNotFoundException, InterruptedException {
 
         HiddenWord hiddenWord = new HiddenWord();
-        System.out.println("-------------");
         hiddenWord.setWord();
-        System.out.println("-------------");
         UserLetter userLetter = new UserLetter();
-        System.out.println("-------------");
         hiddenWord.wordToLetters();
 //        Letters letters = new Letters(hiddenWord.getWord());
 //        letters.wordToLetters();
 
-        PrintUnNowWord unNowWordDefault = new PrintUnNowWord(HiddenWord.getLetters(), userLetter.getUserLetter());
-        unNowWordDefault.setUnNowWord();
+        HiddenWordPrinter hiddenPrintWordDefault = new HiddenWordPrinter(HiddenWord.getLetters(), userLetter.getUserLetter());
+        hiddenPrintWordDefault.setUnNowWord();
 
         GallowsPrinter printGallows = new GallowsPrinter();
         printGallows.setGallows();
 
         printGallows.printGallows();
-        unNowWordDefault.printUnNowWord();
+        hiddenPrintWordDefault.printUnNowWord();
 
-        PrintUnNowWord unNowWord = new PrintUnNowWord(HiddenWord.getLetters(), userLetter.getUserLetter());
-        unNowWord.setUnNowWord();
+        HiddenWordPrinter HiddenWord2 = new HiddenWordPrinter(HiddenWord.getLetters(), userLetter.getUserLetter());
+        HiddenWord2.setUnNowWord();
 
         while (Counter.getCounterDefeat()>0 && Counter.getCounterWin()<HiddenWord.getLetters().length){
 
-            unNowWord.updateUnNowWord();
+            HiddenWord2.updateUnNowWord();
 
             switch (Counter.getCounterDefeat()){
                 case 8:
@@ -51,7 +53,7 @@ public class Interface {
                 break;
             }
             printGallows.printGallows();
-            unNowWord.printUnNowWord();
+            HiddenWord2.printUnNowWord();
         }
         if (Counter.getCounterDefeat()<=0){
             System.out.println("\nYou loose!");
