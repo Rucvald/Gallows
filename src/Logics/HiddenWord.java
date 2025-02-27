@@ -14,7 +14,7 @@ public class HiddenWord {
         Scanner scanner = getScanner();
         int randomNum = random();
         int i = 0;
-        while(scanner.hasNextLine()&&i<randomNum){
+        while (scanner.hasNextLine() && i < randomNum) {
             word = scanner.nextLine();
             i++;
         }
@@ -23,7 +23,7 @@ public class HiddenWord {
 
     private int random() throws FileNotFoundException, InterruptedException {
         Random rand = new Random();
-        int randomNum = rand.nextInt(numberOfWords())+1;
+        int randomNum = rand.nextInt(numberOfWords()) + 1;
         return randomNum;
     }
 
@@ -48,15 +48,15 @@ public class HiddenWord {
         return scanner;
     }
 
-    public void wordToLetters(){
+    public void wordToLetters() {
         letters = word.toCharArray();
     }
 
-    public static char[] getLetters(){
+    public static char[] getLetters() {
         return letters;
     }
 
-    public static int getWordLength(){
+    public static int getWordLength() {
         return letters.length;
     }
 }

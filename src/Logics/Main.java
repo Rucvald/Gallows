@@ -31,7 +31,7 @@ public class Main {
                     break;
             }
 
-            switch(choice) {
+            switch (choice) {
                 case PLAY:
                     Interface gameInterface = new Interface();
                     gameInterface.gameInterface();

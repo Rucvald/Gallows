@@ -16,8 +16,7 @@ public class UserLetter {
                 userLetter = userSymbol.charAt(0);
                 System.out.println("You entered: " + userLetter);
                 notGood = false;
-            }
-            else
+            } else
                 System.out.print("You must enter one letter! Try again.");
         }
     }

@@ -1,4 +1,5 @@
 package Printer;
+
 import Logics.HiddenWord;
 import Logics.UserLetter;
 import Logics.Counter;
@@ -33,8 +34,7 @@ public class HiddenWordPrinter {
         }
         if (index == 0) {
             Counter.setCounterDefeat();
-        }
-        else Counter.setCounterWin();
+        } else Counter.setCounterWin();
     }
 
     public void printUnNowWord() {
